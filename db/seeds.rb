@@ -10,10 +10,12 @@ Restaurant.destroy_all
 
 puts 'Creating restaurants...'
 
+category = %w[chinese italian japanese french belgian]
+
 20.times do
   restaurant = Restaurant.create(
     name: Faker::Restaurant.name,
-    category: Faker::Restaurant.type,
+    category: category.sample,
     phone_number: Faker::PhoneNumber.phone_number_with_country_code
   )
   puts "Created #{restaurant.name}."

@@ -38,10 +38,11 @@ group :development do
   gem 'autoprefixer-rails'
   gem 'faker'
   gem 'font-awesome-sass', '~> 5.6.1'
-  gem 'simple_form'
-  gem 'spring'
-  gem 'spring-watcher-listen', '~> 2.0.0'
 end
+
+gem 'simple_form'
+gem 'spring'
+gem 'spring-watcher-listen', '~> 2.0.0'
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'rails-controller-testing', group: [:test]
