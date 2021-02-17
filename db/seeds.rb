@@ -15,6 +15,7 @@ category = %w[chinese italian japanese french belgian]
 20.times do
   restaurant = Restaurant.create(
     name: Faker::Restaurant.name,
+    address: Faker::Address.street_address,
     category: category.sample,
     phone_number: Faker::PhoneNumber.phone_number_with_country_code
   )
