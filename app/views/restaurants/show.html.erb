@@ -1,11 +1,20 @@
+<div class="d-flex justify-content-between">
+<%= link_to 'Leave a review', new_restaurant_review_path(@restaurant) %>
+<%= link_to "Back to all restaurants", :root %>
+</div>
+
+<br>
+
 <h2><%= @restaurant.name %></h2>
 <p><%= @restaurant.address %></p>
 <p><%= @restaurant.phone_number %></p>
 <p><%= @restaurant.category %></p>
 
-<%= link_to 'Leave a review', new_restaurant_review_path(@restaurant) %>
 <br>
 
-
-
-<%= link_to "Back to all restaurants", :root %>
+<ul class="list-group">
+  <% @restaurant.reviews.each do |review| %>
+    <li class="list-group-item">Review: <%= review.content%><br> Rating: <%='⭐️'*review.rating%></li>
+  <% end %>
+</ul>
+  
