@@ -1,9 +1,13 @@
+<div class="d-flex justify-content-between">
 <h2>Checkout the restaurants below</h2>
+<h2><%= link_to "Add new restaurant", :new_restaurant %></h2>
+</div>
 <hr>
-<%= link_to "Add new restaurant", :new_restaurant %>
-<hr>
-<ul>
-  <% @restaurants.each do |restaurant|%>
-  <li><%= link_to restaurant.name, restaurant_path(restaurant) %></li>
-  <% end %>
-</ul>
+<div class="container">
+
+<% @restaurants.each do |restaurant|%>
+<h3><%= link_to restaurant.name, restaurant_path(restaurant) %></h3>
+<% end %>
+
+
+</div>

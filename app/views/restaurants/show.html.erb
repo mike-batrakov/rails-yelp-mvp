@@ -3,5 +3,9 @@
 <p><%= @restaurant.phone_number %></p>
 <p><%= @restaurant.category %></p>
 
+<%= link_to 'Leave a review', new_restaurant_review_path(@restaurant) %>
+<br>
+
+
 
 <%= link_to "Back to all restaurants", :root %>
